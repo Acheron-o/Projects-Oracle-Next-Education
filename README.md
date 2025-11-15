@@ -6,10 +6,10 @@ This repository contains the challenges and projects developed during the **Orac
 ## 🚀 Projects
 *(If this repo holds multiple projects, list them here)*
 
-| Project | Description | Tech Stack |
-| :--- | :--- | :--- |
-| **Virtual Bank Account System** | A functional user interface in the terminal to simulate basic banking operations. | Java, loops, text blocks|
-
+| Project                         | Description                                                                                         | Tech Stack                                       |
+|:--------------------------------|:----------------------------------------------------------------------------------------------------|:-------------------------------------------------|
+| **Virtual Bank Account System** | A functional user interface in the terminal to simulate basic banking operations .                  | Java, Loops, Text Blocks                         |
+| **Screen Match**                | reate a system (running via Command Line Interface) that manages a catalog of movies and TV series. | API Consumption, Data Processing, Fie Management |
 ## 🛠️ Technologies Used
 * **Language:** Java 17 (or your version)
 * **Frameworks:** Spring Boot (if applicable)
