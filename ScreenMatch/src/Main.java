@@ -1,11 +1,13 @@
+import br.com.alura.screenmatch.modelos.Movie;
+
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
 
-        myMovie.name = "Chainsaw Man - The Movie: Reze Arc";
-        myMovie.releaseYear = 2025; // Estimated release window
-        myMovie.durationInMinutes = 100; // Estimated duration
-        myMovie.includedInPlan = true;
+        myMovie.setName("\nChainsaw Man - The Movie: Reze Arc");
+        myMovie.setReleaseYear(2025);  // Estimated release window
+        myMovie.setDurationInMinutes(100); // Estimated duration
+        myMovie.setIncludedInPlan(true);
 
         // displaying info
         myMovie.showInfo();
