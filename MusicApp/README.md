@@ -82,8 +82,8 @@ classDiagram
 ```bash
 git clone https://github.com/your-username/musicapp.git
 cd musicapp
-javac -d out br/com/alura/musicapp/**/*.java br/com/alura/musicapp/Main.java
-java -cp out br.com.alura.musicapp.Main
+javac -d out br/com/alura/musicapp/**/*.java br/com/alura/musicapp/br.com.alura.musicapp.main.Main.java
+java -cp out br.com.alura.musicapp.br.com.alura.musicapp.main.Main
 ```
 ---
 ## 🎯 OOP Principles Demonstrated

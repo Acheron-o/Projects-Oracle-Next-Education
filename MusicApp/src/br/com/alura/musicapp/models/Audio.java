@@ -5,7 +5,7 @@ public class Audio {
     private int duration;
     private int totalPlays;
     private int likes;
-    private double rating;
+    private int rating;
 
     public String getTitle() {
         return title;
@@ -19,31 +19,24 @@ public class Audio {
         return duration;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
     public int getTotalPlays() {
         return totalPlays;
-    }
-
-    public void setTotalPlays(int totalPlays) {
-        this.totalPlays = totalPlays;
     }
 
     public int getLikes() {
         return likes;
     }
 
-    public void setLikes(int likes) {
-        this.likes = likes;
-    }
-
-    public double getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
+    public void like() {
+        this.likes++;
     }
+
+    public void play(){
+        this.totalPlays++;
+    }
+
 }
