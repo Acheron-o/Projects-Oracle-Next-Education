@@ -47,7 +47,6 @@ classDiagram
         -int duration
         -int totalPlays
         -int likes
-        -double rating
         +play()
         +like()
         +getRating() double
@@ -57,14 +56,11 @@ classDiagram
         -String artist
         -String album
         -String genre
-        -int releaseYear
     }
 
     class Podcasts {
         -String host
-        -int episodeNumber
-        -String series
-        -String guest
+        -String descirption
     }
 
     Audio <|-- Musics
