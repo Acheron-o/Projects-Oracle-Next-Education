@@ -6,10 +6,11 @@ This repository contains the challenges and projects developed during the **Orac
 ## 🚀 Projects
 *(If this repo holds multiple projects, list them here)*
 
-| Project                         | Description                                                                                         | Tech Stack                                       |
-|:--------------------------------|:----------------------------------------------------------------------------------------------------|:-------------------------------------------------|
-| **Virtual Bank Account System** | A functional user interface in the terminal to simulate basic banking operations .                  | Java, Loops, Text Blocks                         |
-| **Screen Match**                | reate a system (running via Command Line Interface) that manages a catalog of movies and TV series. | API Consumption, Data Processing, Fie Management |
+| Project                         | Description                                                                                                                                                           | Tech Stack                                          |
+|:--------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------|
+| **Virtual Bank Account System** | A functional user interface in the terminal to simulate basic banking operations .                                                                                    | Java, Loops, Text Blocks                            |
+| **Screen Match**                | reate a system (running via Command Line Interface) that manages a catalog of movies and TV series.                                                                   | API Consumption, Data Processing, Fie Management    |
+| **Music App**                   | a fully object-oriented Java project designed to demonstrate clean architecture, inheritance, polymorphism, and encapsulation through an audio streaming simulation.  | Inheritance,Polymorphism, Encapsulation,Abstraction |
 ## 🛠️ Technologies Used
 * **Language:** Java 17 (or your version)
 * **Frameworks:** Spring Boot (if applicable)
