@@ -1,12 +1,22 @@
 package br.com.alura.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Title {
+    @SerializedName("Title")
     private String name;
+    @SerializedName("Year")
     private int releaseYear;
     private boolean includedInPlan;
     private double sumOfRatings;
     private int totalRatings;
     private int durationInMinutes;
+    @SerializedName("Genre")
+    private String genre;
+
+    public Title(TituloOmd myTitleOmdb) {
+
+    }
 
     public void showInfo() {
         System.out.println("Movie Name: " + name);
@@ -69,5 +79,13 @@ public class Title {
 
     public void setDurationInMinutes(int durationInMinutes) {
         this.durationInMinutes = durationInMinutes;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 }

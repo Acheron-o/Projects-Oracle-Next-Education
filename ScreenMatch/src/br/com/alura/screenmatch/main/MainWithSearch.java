@@ -1,4 +1,11 @@
 package br.com.alura.screenmatch.main;
+import br.com.alura.screenmatch.modelos.Title;
+import br.com.alura.screenmatch.modelos.TituloOmd;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -12,24 +19,28 @@ public class MainWithSearch {
     static void main(String[] args) throws IOException, InterruptedException {
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Escreva um filme: ");
+        System.out.println("Type a either a movie or series: ");
         var movie = input.nextLine();
         try {
-            // Transforma "Chainsaw Man" em "Chainsaw+Man" e trata caracteres especiais
             var movieEncoded = URLEncoder.encode(movie, StandardCharsets.UTF_8);
-
         String adress = "https://omdbapi.com/?t=" + movieEncoded + "&apikey=2bb2525d";
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(adress))
-                .build();
-        client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-                .thenApply(HttpResponse::body)
-                .thenAccept(System.out::println)
-                .join();
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder().uri(URI.create(adress)).build();
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            var json = response.body();
+            System.out.println(json);
+            Gson gson = new GsonBuilder()
+                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                    .create();
+            TituloOmd myTitleOmdb = gson.fromJson(json, TituloOmd.class);
+            System.out.println("Title: " + myTitleOmdb);
+            Title myTitle = new Title(myTitleOmdb.title());
+
         } catch (Exception e) {
-            System.out.println("Erro ao codificar URL");
+            System.out.println("ERROR while codifying the URL");
         }
+
 
     }
 }
