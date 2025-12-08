@@ -1,52 +1,54 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Serie extends Title {
-    private int season;
-    private int episodesPerSeason;
-    private boolean ongoing;
-    private int minutesPerEpisode;
+public class Serie extends Titulo {
+    private int temporadas;
+    private boolean ativa;
+    private int episodiosPorTemporada;
+    private int minutosPorEpisodio;
 
-    public int getSeason() {
-        return season;
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
     }
 
-    public void setSeason(int season) {
-        this.season = season;
+    public int getTemporadas() {
+        return temporadas;
     }
 
-    public int getEpisodesPerSeason() {
-        return episodesPerSeason;
+    public void setTemporadas(int temporadas) {
+        this.temporadas = temporadas;
     }
 
-    public void setEpisodesPerSeason(int episodesPerSeason) {
-        this.episodesPerSeason = episodesPerSeason;
+    public boolean isAtiva() {
+        return ativa;
     }
 
-    public boolean isOngoing() {
-        return ongoing;
+    public void setAtiva(boolean ativa) {
+        this.ativa = ativa;
     }
 
-    public void setOngoing(boolean ongoing) {
-        this.ongoing = ongoing;
+    public int getEpisodiosPorTemporada() {
+        return episodiosPorTemporada;
     }
 
-    public int getMinutesPerEpisode() {
-        return minutesPerEpisode;
+    public void setEpisodiosPorTemporada(int episodiosPorTemporada) {
+        this.episodiosPorTemporada = episodiosPorTemporada;
     }
 
-    public void setMinutesPerEpisode(int minutesPerEpisode) {
-        this.minutesPerEpisode = minutesPerEpisode;
+    public int getMinutosPorEpisodio() {
+        return minutosPorEpisodio;
+    }
+
+    public void setMinutosPorEpisodio(int minutosPorEpisodio) {
+        this.minutosPorEpisodio = minutosPorEpisodio;
     }
 
     @Override
-    public int getDurationInMinutes() {
-        return episodesPerSeason * season * minutesPerEpisode;
+    public int getDuracaoEmMinutos() {
+        return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
 
     @Override
-    public void showInfo() {
-        System.out.println("Series Name: " + getName());
-        System.out.println("Release Year: " + getReleaseYear());
-        System.out.println("Duration: " + getDurationInMinutes() + " minutes");
+    public String toString() {
+        return "Série: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
     }
 }
