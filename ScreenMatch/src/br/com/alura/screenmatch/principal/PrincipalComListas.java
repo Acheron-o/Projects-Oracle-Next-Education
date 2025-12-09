@@ -10,7 +10,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class PrincipalComListas {
+public class  PrincipalComListas {
     public static void main(String[] args) {
         Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.avalia(9);
